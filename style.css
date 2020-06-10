@@ -6,23 +6,28 @@ body {
     border-style : solid;
     border-width: 20px;
     border-color: black;
-    border-radius:  30px;
+    border-radius:  6px;
     font-variant: small-caps;
-
 }
 
-nav{
+nav {
     padding: 5px;
     font-variant: small-caps;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
-    background-color : rgb(40, 40, 40);
+    background-color : rgb(37, 0, 172);
     color : rgb(191, 207, 207);
     border-radius : 10px;
     padding: 10px;
-
+    border-bottom-width: 10px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right : 0px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-radius: 0px;
 }
 
 p {
