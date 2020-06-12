@@ -1,3 +1,9 @@
+@keyframes padAnim {
+    from {padding: 5px}
+    to{padding: 16px}
+
+}
+
 body {
     background-color: rgb(33, 34, 34);
     color : rgb(191, 207, 207);
@@ -12,10 +18,16 @@ body {
 }
 
 nav {
+    animation-name : padAnim;
+    animation-duration : 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
     padding: 5px;
     font-variant: small-caps;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+
 
 h1 {
     background-color : rgb(10, 76, 85);
