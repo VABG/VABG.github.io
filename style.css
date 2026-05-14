@@ -1,19 +1,62 @@
-body {
-    background-color: rgb(33, 34, 34);
-    color : rgb(191, 207, 207);
+html{
+    height: 100%;
+    margin: 0;
+    background-color: rgb(3, 19, 19);
+}
+
+.mainContainer {
+    margin: 0;
+    Height: auto;
+    margin: 0;
+    background-color: rgb(36, 41, 41);
+    color :  rgb(118, 121, 85);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
-    border-style : solid;
-    border-width: 20px;
-    border-color: black;
+    font-size: 16px;
+    border-style : double;
+    border-width: 5px;
+    padding: 15px;
+    border-radius: 60px;
+    border-color: rgb(105, 99, 64);
+    box-shadow: 5px 5px 10px rgb(0, 11, 20);
+    vertical-align:auto;
 }
 
 h1 {
-    background-color : rgb(40, 40, 40);
-    color : rgb(191, 207, 207);
+    float:left;
+    text-shadow: 2px 2px 4px rgb(1, 0, 34);
+    box-shadow: 5px 5px 10px rgb(0, 11, 20);
+    width: auto;
+    border-radius: 40px;
+    margin: 0;
+    font-size: 40px;
+    text-align: center;
+    padding: 2%;
+    border-style :double;
+    border-width: 5px;
+    background: linear-gradient(to bottom, rgb(10, 17, 27), rgb(36, 41, 41)  );
+    color : rgb(118, 121, 85);
 }
 
 p {
     background-color: rgb(50,50,50);
-    color : rgb(191, 207, 207);
+    color :  rgb(157, 160, 119);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+canvas{
+    z-index: 3;
+    left:0;
+    top:0;
+    width: 100%;
+    Height: 100%;
+    position: fixed;
+    background-color: rgba(255, 136, 0, 0.034);
+}
+
+.center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
