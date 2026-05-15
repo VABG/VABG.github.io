@@ -1,28 +1,74 @@
-html{
-    height: 100%;
+html {
+    height: 100vh;
     margin: 0;
-    background-color: rgb(3, 19, 19);
+    background-color: rgb(5, 14, 14);
 }
 
 .mainContainer {
     margin: 0;
-    Height: auto;
-    margin: 0;
     background-color: rgb(36, 41, 41);
-    color :  rgb(118, 121, 85);
+    color: rgb(118, 121, 85);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
-    border-style : double;
+    border-style: double;
     border-width: 5px;
     padding: 15px;
-    border-radius: 60px;
+    border-radius: 80px;
+    border-radius: 0px;
     border-color: rgb(105, 99, 64);
     box-shadow: 5px 5px 10px rgb(0, 11, 20);
-    vertical-align:auto;
+    vertical-align: middle;
+    background: linear-gradient(-45deg, #161a1a, #273131, #161a1a, #30373a);
+    background-size: 400% 400%;
+    animation: borderExpand 3s ease-out forwards, gradientAnimation 45s ease-in-out infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes borderExpand {
+    0% {
+        border-radius: 0px;
+        border-color: rgb(12, 12, 12);
+    }
+    
+    25% {
+        border-radius: 0px;
+        border-color: rgb(12, 12, 12);
+    }
+
+    50% {
+        border-radius: 0px;
+        border-color: rgb(105, 99, 64);
+    }
+
+    100% {
+        border-radius:80px;
+    }
+}
+
+.mainContainer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
 }
 
 h1 {
-    float:left;
     text-shadow: 2px 2px 4px rgb(1, 0, 34);
     box-shadow: 5px 5px 10px rgb(0, 11, 20);
     width: auto;
@@ -30,33 +76,76 @@ h1 {
     margin: 0;
     font-size: 40px;
     text-align: center;
-    padding: 2%;
-    border-style :double;
+    padding: 10px;
+    border-style: double;
     border-width: 5px;
-    background: linear-gradient(to bottom, rgb(10, 17, 27), rgb(36, 41, 41)  );
-    color : rgb(118, 121, 85);
+    background: linear-gradient(to bottom, rgb(10, 17, 27), rgb(36, 41, 41));
+    color: rgb(118, 121, 85);
+    animation: h1Appear 1s ease-out forwards, h1RotateGradient 15s infinite ;
+}
+
+
+@keyframes h1Appear {
+    0% {
+        opacity: 0;
+        border-color: rgb(12, 12, 12);
+        color: rgb(12, 12, 12);
+        border-radius: 0px;
+        margin: 10px;
+        padding: 0px;
+    }
+
+    20%
+    {
+        color: rgb(12, 12, 12);
+    }
+
+    30% {
+        opacity: 1;
+        border-color: rgb(12, 12, 12);
+        border-radius: 0px;
+        margin: 10px;
+        padding: 0px;
+    }
+
+    100% {
+        margin: 0px;
+        padding: 10px;
+        border-radius: 40px;
+    }
+
 }
 
 p {
-    background-color: rgb(50,50,50);
-    color :  rgb(157, 160, 119);
+    background-color: rgb(50, 50, 50);
+    color: rgb(157, 160, 119);
     padding: 10px;
     border-radius: 10px;
+    margin: 0;
+    animation: slideIn 1.25s ease-out 1s forwards;
+    opacity: 0;
+    transform: translateY(-120px) rotate(-15deg);
 }
 
-canvas{
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-120px) rotate(-15deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+canvas {
     z-index: 3;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     width: 100%;
-    Height: 100%;
+    height: 100%;
     position: fixed;
-    background-color: rgba(255, 136, 0, 0.034);
-}
-
-.center
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(255, 136, 0, 0);
+    mix-blend-mode:screen;
 }
