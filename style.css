@@ -6,6 +6,7 @@ html {
 
 .mainContainer {
     margin: 0;
+    height:max-content;
     background-color: rgb(36, 41, 41);
     color: rgb(118, 121, 85);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -14,10 +15,8 @@ html {
     border-width: 5px;
     padding: 15px;
     border-radius: 80px;
-    border-radius: 0px;
     border-color: rgb(105, 99, 64);
     box-shadow: 5px 5px 10px rgb(0, 11, 20);
-    vertical-align: middle;
     background: linear-gradient(-45deg, #161a1a, #273131, #161a1a, #30373a);
     background-size: 400% 400%;
     animation: borderExpand 3s ease-out forwards, gradientAnimation 45s ease-in-out infinite;
