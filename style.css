@@ -1,24 +1,31 @@
 html {
     height: 100vh;
     margin: 0;
-    background-color: rgb(5, 14, 14);
+    background: linear-gradient(180deg, #161a1a, #020202);
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
 }
 
 .mainContainer {
-    margin: 0;
-    height:max-content;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
     background-color: rgb(36, 41, 41);
-    color: rgb(118, 121, 85);
+    color: rgb(162, 165, 128);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
     border-style: double;
     border-width: 5px;
     padding: 15px;
     border-radius: 80px;
-    border-color: rgb(105, 99, 64);
+    align-items: flex-start;
+    border-color: rgb(100, 30, 30);
     box-shadow: 5px 5px 10px rgb(0, 11, 20);
-    background: linear-gradient(-45deg, #161a1a, #273131, #161a1a, #30373a);
-    background-size: 400% 400%;
+    background: linear-gradient(-45deg, #0c11119a, #37444480, #10141481, #424c5085);
+    background-size: 300% 300%;
     animation: borderExpand 3s ease-out forwards, gradientAnimation 45s ease-in-out infinite;
 }
 
@@ -36,92 +43,122 @@ html {
     }
 }
 
+
 @keyframes borderExpand {
     0% {
         border-radius: 0px;
         border-color: rgb(12, 12, 12);
     }
-    
+
     25% {
         border-radius: 0px;
         border-color: rgb(12, 12, 12);
     }
 
-    50% {
-        border-radius: 0px;
-        border-color: rgb(105, 99, 64);
+    27% {
+        border-color: rgb(197, 62, 62);
     }
 
+
+    50% {
+        border-radius: 0px;
+    }
+
+
     100% {
-        border-radius:80px;
+        border-color: rgb(100, 30, 30);
+        border-radius: 80px;
     }
 }
 
 .mainContainer div {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 20px;
 }
 
 h1 {
     text-shadow: 2px 2px 4px rgb(1, 0, 34);
     box-shadow: 5px 5px 10px rgb(0, 11, 20);
+    font-family: 'MS Gothic', Impact, Times;
+    font-weight: bold;
     width: auto;
     border-radius: 40px;
     margin: 0;
     font-size: 40px;
     text-align: center;
-    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-style: double;
     border-width: 5px;
     background: linear-gradient(to bottom, rgb(10, 17, 27), rgb(36, 41, 41));
-    color: rgb(118, 121, 85);
-    animation: h1Appear 1s ease-out forwards, h1RotateGradient 15s infinite ;
+    color: rgb(156, 49, 49);
+    border-color: rgb(87, 31, 31);
+    animation: h1Appear 2s ease-out forwards , rotateAtTimes 10s infinite;
 }
 
 
 @keyframes h1Appear {
     0% {
         opacity: 0;
-        border-color: rgb(12, 12, 12);
-        color: rgb(12, 12, 12);
-        border-radius: 0px;
-        margin: 10px;
+        border-color: rgba(0, 0, 0, 0);
         padding: 0px;
     }
 
-    20%
-    {
-        color: rgb(12, 12, 12);
-    }
-
-    30% {
+    5% {
+        border-color: rgb(230, 17, 17);
         opacity: 1;
-        border-color: rgb(12, 12, 12);
         border-radius: 0px;
-        margin: 10px;
         padding: 0px;
     }
 
     100% {
         margin: 0px;
-        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
         border-radius: 40px;
     }
 
 }
 
+@keyframes rotateAtTimes {
+    0% {
+        transform: rotate(0deg) translateX(0px);
+        border-radius: 0%;
+    }
+
+    80% {
+        transform: rotate(0deg) translateX(0px);
+    }
+
+    83% {
+        transform: rotate(-5deg) translateX(-5px);
+        border-radius: 0px;
+    }
+
+    84% {
+        border-radius: 40px;
+    }
+
+    90% {
+        transform: rotate(365deg) translateX(1px);
+    }
+
+    100% {
+        border-radius: 0px;
+        transform: rotate(360deg) translateX(0px);
+    }
+}
+
 p {
-    background-color: rgb(50, 50, 50);
+    background-color: rgba(97, 97, 97, 0.26);
     color: rgb(157, 160, 119);
     padding: 10px;
     border-radius: 10px;
     margin: 0;
-    animation: slideIn 1.25s ease-out 1s forwards;
+    animation: slideIn 1.25s ease-out 1s forwards, bob 4s ease-in-out infinite;
     opacity: 0;
     transform: translateY(-120px) rotate(-15deg);
 }
@@ -138,6 +175,20 @@ p {
     }
 }
 
+@keyframes bob {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 canvas {
     z-index: 3;
     left: 0;
@@ -146,5 +197,6 @@ canvas {
     height: 100%;
     position: fixed;
     background-color: rgba(255, 136, 0, 0);
-    mix-blend-mode:screen;
+    mix-blend-mode: screen;
+    pointer-events: none;
 }
